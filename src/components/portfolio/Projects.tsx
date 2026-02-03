@@ -14,10 +14,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "App de Lista de Tarefas",
+    title: "Studium Academy",
     description:
-      "Aplicação web para gerenciamento de tarefas com funcionalidades de adicionar, editar e excluir itens. Dados persistidos no localStorage.",
-    tags: ["React", "Tailwind CSS", "LocalStorage"],
+      "Em desenvolvimento.",
+    tags: ["Em breve"],
     link: "#",
     github: "#",
   },

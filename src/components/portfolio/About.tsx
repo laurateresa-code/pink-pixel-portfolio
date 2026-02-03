@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Code2, Heart, Lightbulb, Target } from "lucide-react";
+import { Code2, Heart, Lightbulb, Target, Brain, MessageSquare, Users, Gauge } from "lucide-react";
 
 const highlights = [
   {
@@ -21,6 +21,26 @@ const highlights = [
     icon: Heart,
     title: "Dedicação",
     description: "Comprometida com a qualidade",
+  },
+  {
+    icon: Brain,
+    title: "Pensamento Lógico",
+    description: "Abordagem criativa para soluções eficientes",
+  },
+  {
+    icon: MessageSquare,
+    title: "Comunicação Técnica",
+    description: "Clareza ao explicar ideias e decisões",
+  },
+  {
+    icon: Users,
+    title: "Colaboração",
+    description: "Boa adaptação em times multidisciplinares",
+  },
+  {
+    icon: Gauge,
+    title: "Performance",
+    description: "Foco em escalabilidade e produto final",
   },
 ];
 
@@ -77,29 +97,35 @@ const About = () => {
             {/* Text Content */}
             <div className="space-y-6 section-animate flex flex-col justify-center h-full">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Sempre tive curiosidade em entender como a web funciona, o que me levou ao 
-                desenvolvimento Front-end. Para mim, programar é mais do que escrever código: 
-                é a oportunidade de criar experiências úteis e visualmente agradáveis, 
-                transformando ideias em realidade na tela.
+                Sou desenvolvedora de sistemas júnior, recém-formada, com interesse em construir soluções bem estruturadas e funcionais. Estou em constante aprendizado e busco aplicar boas práticas de desenvolvimento, organização de código e atenção aos detalhes em cada projeto.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
-                Mesmo estando no início da carreira, encaro cada desafio técnico como um 
-                degrau para evoluir. Trago muita vontade de aprender e colaborar, buscando 
-                uma oportunidade onde possa contribuir com dedicação e crescer junto com a equipe.
+                Gosto de transformar ideias em aplicações claras e eficientes, sempre com foco na experiência do usuário. Tenho uma postura colaborativa, valorizo feedbacks e encaro cada desafio como uma oportunidade de evoluir tecnicamente e como profissional.
+              </p>
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                Acredito que o desenvolvimento é um processo contínuo e estou motivada a crescer, aprender novas tecnologias e contribuir de forma positiva para os projetos dos quais participo.
               </p>
             </div>
           </div>
 
+          {/* Soft Skills Header */}
+          <div id="soft-skills" className="text-center mb-12 section-animate scroll-mt-24">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Soft <span className="text-gradient">Skills</span>
+            </h3>
+            <div className="w-20 h-1 bg-primary/50 mx-auto rounded-full" />
+          </div>
+
           {/* Highlights Grid - Moved to bottom */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((item, index) => (
               <div
                 key={item.title}
-                className="section-animate p-6 rounded-2xl bg-card border border-border card-hover text-center hover:-translate-y-1 transition-transform duration-300"
+                className="section-animate p-6 rounded-2xl bg-card border border-border card-hover text-center hover:-translate-y-1 transition-transform duration-300 flex flex-col items-center"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                  <item.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 text-primary">
+                  <item.icon className="w-6 h-6" />
                 </div>
                 <h3 className="font-semibold mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>

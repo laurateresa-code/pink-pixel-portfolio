@@ -27,7 +27,7 @@ const socialLinks = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    href: "https://wa.me/31998411846",
+    href: "https://wa.me/31998411846?text=Ol%C3%A1%2C+vim+pelo+site%21",
     color: "hover:text-green-500",
   },
 ];

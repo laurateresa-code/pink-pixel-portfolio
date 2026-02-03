@@ -115,8 +115,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl max-w-2xl mx-auto animate-fade-in transition-colors duration-1000 text-muted-foreground pointer-events-auto" style={{ animationDelay: "0.2s" }}>
-            Desenvolvedora Júnior apaixonada por criar experiências digitais
-            bonitas e funcionais
+            Desenvolvedora Júnior
           </p>
 
           {/* CTA Buttons */}
