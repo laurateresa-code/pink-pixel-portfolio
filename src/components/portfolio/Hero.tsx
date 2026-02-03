@@ -137,17 +137,6 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce pointer-events-auto">
-          <button
-            onClick={scrollToAbout}
-            className="p-2 rounded-full border transition-colors border-border hover:border-primary/50 text-muted-foreground"
-            aria-label="Rolar para baixo"
-          >
-            <ArrowDown className="w-5 h-5" />
-          </button>
-        </div>
       </div>
     </section>
   );
