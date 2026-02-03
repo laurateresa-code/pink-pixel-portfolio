@@ -18,7 +18,6 @@ const tools = [
   "Notion",
   "Trello",
   "Canva",
-  "ChatGPT",
   "Lovable",
 ];
 

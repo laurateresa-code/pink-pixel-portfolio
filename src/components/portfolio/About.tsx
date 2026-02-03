@@ -58,44 +58,53 @@ const About = () => {
           </div>
 
           {/* About Content */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="space-y-6 section-animate">
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                Olá! Sou a <strong className="text-primary">Laura Teresa</strong>, 
-                uma desenvolvedora júnior apaixonada por tecnologia e design. 
-                Estou no início da minha jornada na programação, mas isso não me 
-                impede de entregar trabalhos de qualidade.
-              </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                Acredito que ser júnior é uma oportunidade única de aprender 
-                com humildade, fazer perguntas e absorver conhecimento de 
-                profissionais mais experientes. Estou sempre em busca de 
-                melhorar minhas habilidades e entregar o melhor código possível.
-              </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
-                Meu foco atual está em desenvolvimento front-end, criando 
-                interfaces bonitas, responsivas e acessíveis. Cada projeto é 
-                uma oportunidade de aprender algo novo!
-              </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            {/* Photo Placeholder */}
+            <div className="section-animate relative group">
+              <div className="relative w-full aspect-square max-w-md mx-auto rounded-2xl overflow-hidden shadow-xl border-4 border-background/50">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Laura Teresa" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              {/* Decorative elements behind photo */}
+              <div className="absolute -z-10 top-4 -right-4 w-full h-full rounded-2xl border-2 border-primary/30" />
+              <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-2xl bg-primary/5" />
             </div>
 
-            {/* Highlights Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {highlights.map((item, index) => (
-                <div
-                  key={item.title}
-                  className="section-animate p-6 rounded-2xl bg-card border border-border card-hover"
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
-                </div>
-              ))}
+            {/* Text Content */}
+            <div className="space-y-6 section-animate flex flex-col justify-center h-full">
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                Sempre tive curiosidade em entender como a web funciona, o que me levou ao 
+                desenvolvimento Front-end. Para mim, programar é mais do que escrever código: 
+                é a oportunidade de criar experiências úteis e visualmente agradáveis, 
+                transformando ideias em realidade na tela.
+              </p>
+              <p className="text-lg text-foreground/80 leading-relaxed">
+                Mesmo estando no início da carreira, encaro cada desafio técnico como um 
+                degrau para evoluir. Trago muita vontade de aprender e colaborar, buscando 
+                uma oportunidade onde possa contribuir com dedicação e crescer junto com a equipe.
+              </p>
             </div>
+          </div>
+
+          {/* Highlights Grid - Moved to bottom */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {highlights.map((item, index) => (
+              <div
+                key={item.title}
+                className="section-animate p-6 rounded-2xl bg-card border border-border card-hover text-center hover:-translate-y-1 transition-transform duration-300"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 mx-auto">
+                  <item.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

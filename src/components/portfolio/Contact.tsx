@@ -21,7 +21,7 @@ const socialLinks = [
   {
     icon: Mail,
     label: "Email",
-    href: "https://mail.google.com/mail/?view=cm&fs=1&to=laurteresajpereira@gmail.com",
+    href: "mailto:laurateresajpereira@gmail.com",
     color: "hover:text-red-500",
   },
   {
@@ -90,19 +90,25 @@ const Contact = () => {
     return isValid;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) return;
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // Construct mailto link
+    const subject = encodeURIComponent(`Contato do Portfólio: ${formData.name}`);
+    const body = encodeURIComponent(
+      `Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`
+    );
+    
+    // Open email client
+    window.location.href = `mailto:laurateresajpereira@gmail.com?subject=${subject}&body=${body}`;
     
     toast({
-      title: "Mensagem enviada! ✨",
-      description: "Obrigada pelo contato! Responderei em breve.",
+      title: "Abrindo cliente de email... 📧",
+      description: "Por favor, confirme o envio no seu aplicativo de email.",
     });
     
     setFormData({ name: "", email: "", message: "" });

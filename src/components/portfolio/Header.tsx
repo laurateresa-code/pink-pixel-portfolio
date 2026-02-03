@@ -34,16 +34,16 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-lg border-b border-border"
+          ? "bg-background/10 backdrop-blur-sm shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="group flex flex-col">
-            <span className="text-2xl font-bold text-gradient">Laura Teresa</span>
-            <span className="text-xs text-muted-foreground tracking-wider">
+          <a href="#" className="group flex flex-col items-start">
+            <img src="/logo.svg" alt="Laura Teresa" className="h-12 w-auto mb-1" />
+            <span className="text-xs text-muted-foreground tracking-wider pl-1">
               Desenvolvedora Júnior
             </span>
           </a>

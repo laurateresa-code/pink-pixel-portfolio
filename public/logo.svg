@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <!-- Icon: Code Brackets -->
+  <path d="M40 20 L20 50 L40 80 M60 20 L80 50 L60 80 M48 75 L52 25" 
+        stroke="#ec4899" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        
+  <!-- Text: Laura Teresa -->
+  <text x="100" y="65" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#ec4899">Laura Teresa</text>
+</svg>

@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 const projects = [
   {
     id: 1,
-    title: "Landing Page Moderna",
+    title: "Litera",
     description:
-      "Uma landing page responsiva e elegante para uma startup fictícia. Desenvolvida com HTML, CSS e JavaScript, focando em animações suaves e boa experiência do usuário.",
+      "Uma rede social desenvolvida pensando em conectar leitores e autores. O usuário pode concluir metas de leitura, interagir com outros leitores e discutir suas opiniões sobre os livros que estão lendo.",
     tags: ["HTML", "CSS", "JavaScript"],
-    link: "https://sitelivros-three.vercel.app/my-books",
+    link: "https://sitelivros-three.vercel.app/",
     github: "https://github.com/laurateresa-code/sitelivros.git",
   },
   {
@@ -130,9 +130,16 @@ const Projects = () => {
               variant="outline"
               size="lg"
               className="border-primary/30 hover:bg-primary/10"
+              asChild
             >
-              <Github className="w-5 h-5 mr-2" />
-              Ver mais no GitHub
+              <a 
+                href="https://github.com/laurateresa-code"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="w-5 h-5 mr-2" />
+                Ver mais no GitHub
+              </a>
             </Button>
           </div>
         </div>
